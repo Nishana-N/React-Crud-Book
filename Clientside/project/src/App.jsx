@@ -1,12 +1,13 @@
 import React from "react"
 import { BrowserRouter ,Routes, Route } from "react-router-dom"
 import Header from "./Components/Header"
-import Home from "../../../Routes/Home"
-import About from "../../../Routes/About/About"
-import Book from "../../../Routes/Books/Book"
-import SingleBook from "../../../Routes/Books/SingleBook"
-import CreateBook from "../../../Routes/Books/CreateBook"
-import EditBook from "../../../Routes/Books/EditBook"
+import Home from "./Route/Home"
+import About from "./Route/About/About"
+import Book from "./Route/Books/Book"
+import SingleBook from "./Route/Books/SingleBook"
+import CreateBook from "./Route/Books/CreateBook"
+import EditBook from "./Route/Books/EditBook"
+
 function App() {
   
 
@@ -15,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Header/>
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/"  element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/books" element={<Book/>}/>
           <Route path="/books/:slug" element={<SingleBook/>}/>
